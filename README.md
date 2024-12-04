@@ -3,9 +3,11 @@ This project is a comprehensive Movie Database Management System built using MyS
 
 Key Features:<br> 
 
-Database Design: Relational tables with primary and foreign keys.<br>
-Data Manipulation: Perform CRUD operations (Insert, Update, Delete) and retrieve data.<br>
-Advanced Queries: Extract insights like top-rated movies, actor collaborations, and genre trends using joins, subqueries, and aggregate functions.<br>
+Movie Information Management: Add, edit, and delete movie information, including titles, release dates, genres, and directors.<br>
+Search and Filtering: Search for movies based on various criteria, such as title, genre, director, actor, or rating.<br>
+User Ratings and Reviews: Allow users to rate movies and write reviews,providing valuable insights and recommendations.<br>
+Data Analysis and Reporting: Generate reports on movie popularity, ratings trends, and other relevant data.<br>
+User Authentication and Access Control: Implement secure user authentication and access control mechanisms to protect user data and prevent unauthorized access.<br>
 
 This project is an excellent resource for data enthusiasts, budding data scientists, or database engineers looking to enhance their SQL skills while working on a real-world dataset.<br>
 
