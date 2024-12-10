@@ -531,21 +531,6 @@ SELECT A.name, B.id, B.title
 FROM names AS A LEFT JOIN movie AS B
 ON A.known_for_movies = B.id;
 
--- 8) Retrieve a list of all actors and the movies they have acted in, along with the corresponding genres.
-
-SELECT A.name AS Actors_Name, B.title AS Movies_Name, C.genre
-FROM names AS A
-LEFT JOIN movie AS B ON A.known_for_movies = B.id
-LEFT JOIN genre AS C ON B.id = C.movie_id;
-
---  9) Display the names of all directors, their directed movies, and the corresponding genres of those movies.
-
-SELECT B.name AS Director_Name, C.title AS Movie_Name, D.genre
-FROM director_mapping AS A
-LEFT JOIN names AS B ON A.name_id = B.id 
-LEFT JOIN movie AS C ON A.movie_id = C.id
-LEFT JOIN genre AS D ON C.id = D.movie_id;
-
 -- 1) Find the names of actors and actresses who played roles in the movie 'The Evil Dead' (tt0083907).
 
 SELECT name FROM names
