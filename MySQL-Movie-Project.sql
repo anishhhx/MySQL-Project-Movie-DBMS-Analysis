@@ -489,21 +489,14 @@ DESC names;
 select * from ratings; 
 DESC ratings;
 
--- JOINS
-
 -- 1) Retrieve the names of actors and actresses who worked in the movie with the title 'A Matter of Life and Death' (tt0038733).
 
-SELECT B.name
-FROM movie AS A INNER JOIN names AS B
-ON A.id = B.known_for_movies
-WHERE B.known_for_movies = "tt0038733";
+ select name from names where known_for_movies='tt0038733';<br>
 
 -- 2) List the titles and release years of movies directed by Patrick Regan.
 
-SELECT A.title, A.year
-FROM movie AS A INNER JOIN names AS B
-ON A.id = B.known_for_movies
-WHERE name = "Patrick Regan";
+select title,year from movie where id=(select name from <br>
+names where name = 'Patrick Regan');
 
 -- 3) Find the total number of movies in the 'Horror' genre.
 
@@ -552,8 +545,6 @@ FROM director_mapping AS A
 LEFT JOIN names AS B ON A.name_id = B.id 
 LEFT JOIN movie AS C ON A.movie_id = C.id
 LEFT JOIN genre AS D ON C.id = D.movie_id;
-
--- SUBQUERIES
 
 -- 1) Find the names of actors and actresses who played roles in the movie 'The Evil Dead' (tt0083907).
 
