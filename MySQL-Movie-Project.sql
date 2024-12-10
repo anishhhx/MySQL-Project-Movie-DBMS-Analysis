@@ -491,11 +491,11 @@ DESC ratings;
 
 -- 1) Retrieve the names of actors and actresses who worked in the movie with the title 'A Matter of Life and Death' (tt0038733).
 
- select name from names where known_for_movies='tt0038733';<br>
+ select name from names where known_for_movies='tt0038733';
 
 -- 2) List the titles and release years of movies directed by Patrick Regan.
 
-select title,year from movie where id=(select name from <br>
+select title,year from movie where id=(select name from 
 names where name = 'Patrick Regan');
 
 -- 3) Find the total number of movies in the 'Horror' genre.
